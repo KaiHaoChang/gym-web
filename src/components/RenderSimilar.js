@@ -1,11 +1,11 @@
 import React from 'react'
-import {Box, Stack, Typography} from '@mui/material'
+
 import { Link } from 'react-router-dom'
 
 const RenderSimilar = ({data}) => {
   return (
     data.slice(0,3).map(item=>{
-      const { bodyPart, equipment, gifUrl, id, name, target } = item
+      const { gifUrl, id, name } = item
       return (
         <Link style={{textDecoration:'none'}} className='exercise-card' to={`/exercise/${id}`}>
           <img src={gifUrl} alt={name} loading='lazy'/>     
